@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="card" *ngFor="let card of data">
+        <a class="card-link"  routerLink="/anime/{{getUrl(card.title)}}" (click)='emitirId(card.mal_id)' >
+            <img src="" alt="animeFull" class="img" [src]='card.image_url'>
+        </a>
+        <label class="title">{{card.title}}</label>
+    </div>
+</div>
+
+<p *ngIf="data==0">No hay resultados</p> 

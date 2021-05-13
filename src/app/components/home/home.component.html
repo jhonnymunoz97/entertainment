@@ -1,0 +1,10 @@
+    <div class="header">
+        <h1>ANIME<strong>FULL</strong></h1>
+        <input type="text" name="search" id="search" placeholder="Escriba un anime..." [(ngModel)]="anime" (keydown.enter)="searchAnime(anime)">
+    </div>
+
+    <app-cards [data]='animes' *ngIf="status"></app-cards>
+
+
+
+

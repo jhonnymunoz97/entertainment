@@ -1,0 +1,47 @@
+
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink=''><span>ANIME</span><strong>FULL</strong></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link" routerLink='' routerLinkActive='active'>Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink='/directorio' routerLinkActive='active'>Directorio de Animes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink='/ranking' routerLinkActive='active'>Ranking de animes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink='/emision' routerLinkActive='active'>Animes en emisión</a>
+          </li>
+        </ul>
+        <div class="d-flex" *ngIf="getRoute()!='/' && getRoute()!='/login' && getRoute()!='/registro'">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-light me-4" type="button">Search</button>
+        </div>
+      </div>
+      
+        <a class="btn btn-success me-2" routerLink="/login"> Iniciar Sesión </a>
+        <a class="btn btn-primary me-2" routerLink="/registro"> Registrarse </a>
+      </div>
+      <!-- <div>
+        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+          <option>
+
+          </option>
+          <option value="1">Mi perfil</option>
+          <option value="2">Descoectarme</option>
+        </select>
+      </div> -->
+      
+      <div>
+
+
+    </div>
+  </nav>
+  

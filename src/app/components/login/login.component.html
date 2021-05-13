@@ -1,0 +1,31 @@
+<div class="container col-3">
+    <form col [formGroup]="form" novalidate (ngSubmit)="sendForm($event)">
+        <label for=""></label>
+        <div class="mb-3 ">
+          <label for="exampleInputEmail1" class="form-label">Usuario</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="user" autocomplete="off">
+          <div *ngIf="form.get('user')?.errors && form.get('user')?.touched">
+            <span *ngIf="form.get('user')?.hasError('required')" style="color: red;">Este campo es requerido</span>
+            <span *ngIf="form.get('user')?.hasError('minlength')"  style="color: red;">Este campo debe tener al menos 4 caracteres</span>
+            <span *ngIf="form.get('user')?.hasError('maxlength')"  style="color: red;">Este campo no puede tener más de 10 caracteres</span>
+          </div>
+        </div>
+        <div class="mb-3 ">
+          <label for="exampleInputEmail1" class="form-label">Correo Electrónico</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email" autocomplete="off">
+          <div *ngIf="form.get('email')?.errors && form.get('email')?.touched">
+            <span *ngIf="form.get('email')?.hasError('required')"  style="color: red;">Este campo es requerido</span>
+            <span *ngIf="form.get('email')?.hasError('email') "  style="color: red;">Este campo debe ser un email</span>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password" autocomplete="off">
+          <div *ngIf="form.get('password')?.errors && form.get('password')?.touched">
+            <span *ngIf="form.get('password')?.hasError('required')"  style="color: red;">Este campo es requerido</span>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" >Submit</button>
+      </form>
+
+</div>

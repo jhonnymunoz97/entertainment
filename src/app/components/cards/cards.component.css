@@ -1,0 +1,52 @@
+.container{
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content:center;
+    margin-bottom: 16px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
+    height: 370px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
+    
+}
+.img:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.card-link{
+    width: 100%;
+    height: 80%;
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.title{
+    margin-top: 10px;
+    text-align: center;
+    color: cadetblue;
+    font-weight: bold;
+}
+
+p{
+    margin-left: 50px;
+    font-size: 24px;
+    font-weight: bold;
+    color: cadetblue;
+}
